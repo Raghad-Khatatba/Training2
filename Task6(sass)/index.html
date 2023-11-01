@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registration</h2>
+      <form action="your_server_script.php" method="post">
+        <div class="form-group">
+          <label for="fname">First Name:</label>
+          <input
+            type="text"
+            id="fname"
+            name="name"
+            placeholder="Enter your first name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name:</label>
+          <input
+            type="text"
+            id="lname"
+            name="name"
+            placeholder="Enter your last name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone">Mobile:</label>
+          <input
+            type="number"
+            id="phone"
+            name="email"
+            placeholder="Enter your mobile phone"
+            required
+          />
+        </div>
+        <div class="form-group option" >
+          <label for="gender" style="width: 15%;font-weight: bold;">Gender:</label>
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            required
+            style="width: auto"
+          />
+          <label for="male" style="width: auto">Male</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            required
+            style="width: auto"
+          />
+          <label for="female" style="width: auto">Female</label>
+        </div>
+        <div class="form-group">
+          <label for="birthdate">Date of Birth</label>
+          <input type="date" id="birthdate" name="birthdate" />
+        </div>
+        <div class="form-group">
+          <label for="adress">Adress:</label>
+          <textarea
+            id="adress"
+            name="adress"
+            placeholder="Enter your adress"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="city">City:</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter city name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="area">Area:</label>
+          <input type="text" id="area" name="area" required />
+        </div>
+        <div class="form-group">
+          <label for="pin">Area PIN:</label>
+          <input type="text" id="pin" name="pin" required />
+        </div>
+        <div class="form-group">
+          <label for="state">State:</label>
+          <input type="text" id="state" name="state" required />
+        </div>
+        <div class="form-group" style="margin: 10px 0">
+          <label for="qualification" style="width: 17%">Qualification:</label>
+          <select id="qualification" name="qualification">
+            <option value="">Select Qualification</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="checkbox" style="width: 17%;">Specialization:</label>
+          <div class="checkbox">
+            <div class="form-group">
+              <input
+                type="checkbox"
+                id="checkbox"
+                name="option"
+                value="Computer Science"
+                style="width: auto"
+              />
+              <label for="checkbox" style="width: auto">Computer Science</label>
+            </div>
+            <div class="form-group">
+              <input
+                type="checkbox"
+                id="checkbox"
+                name="option"
+                value="Information Technology"
+                style="width: auto"
+              />
+              <label for="checkbox" style="width: auto"
+                >Information Technology</label
+              >
+            </div>
+            <div class="form-group">
+              <input
+                type="checkbox"
+                id="checkbox"
+                name="option"
+                value="Computer Architecture"
+                style="width: auto"
+              />
+              <label for="checkbox" style="width: auto"
+                >Computer Architecture</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="form-group"style="margin-top:10px">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+          </div>
+        <div class="form-group">
+          <input type="submit" value="Registered" style="width: auto" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
