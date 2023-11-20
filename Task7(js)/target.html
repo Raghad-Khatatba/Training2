@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .colored-text {
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="mx-3">User Information</h1>
+    <br>
+    <div>
+        <h2 class="text-center" id="colored-text">Name: <span id="firstName"></span> <span id="lastName"></span></h2>
+    </div>
+    <div class="d-flex justify-content-center">
+        <label class="radio-label m-3" style="color: red;">
+            <input type="radio" name="textColor" value="red" id="Red"> Red
+        </label>
+        <label class="radio-label m-3" style="color: green;">
+            <input type="radio" name="textColor" value="green" id="Green"> Green
+        </label>
+        <label class="radio-label m-3" style="color:blue;">
+            <input type="radio" name="textColor" value="blue" id="Blue"> Blue
+        </label>
+        <label class="radio-label m-3" style="color: yellow;">
+            <input type="radio" name="textColor" value="yellow" id="Yellow"> Yellow
+        </label>
+    </div>
+
+    <script>
+      /*  var firstName = localStorage.getItem("firstName");
+        var lastName = localStorage.getItem("lastName");*/
+
+        const urlParams = new URLSearchParams(window.location.search);
+
+     const firstName = urlParams.get("fname");
+     const lastName = urlParams.get("lname");
+
+        if (firstName && lastName) {
+            document.getElementById("firstName").textContent = firstName;
+            document.getElementById("lastName").textContent = lastName;
+        }
+
+        const radioButtons = document.querySelectorAll('input[name="textColor"]');
+
+        radioButtons.forEach(function (radioButton) {
+            radioButton.addEventListener("change", function () {
+                changeTextColor(this.value);
+            });
+        });
+
+        function changeTextColor(color) {
+            document.getElementById("colored-text").style.color = color;
+        }
+    </script>
+</body>
+</html>

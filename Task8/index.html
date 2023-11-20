@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/cdnjs.cloudflare.com_ajax_libs_limonte-sweetalert2_11.7.32_sweetalert2.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <!--start nav-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary text fixed-top " style="background-color:  #504b4d  !important; padding: 10px;">
+    <div class="container custom-container ">
+        <a class="navbar-brand" href="#" style="color: white; font-family: 'Dosis', sans-serif;font-weight: 800;font-size: 22px;" >Fashin<span style="color: #e5345b;">Shop</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="font-size: 10px !important;color: white;background-color: white;">
+          <span class="navbar-toggler-icon" style="color: white !important;"></span>
+        </button>
+      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center mx-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active1 text-white" aria-current="page" href="#" onclick="handleNavItem(this)">HOME</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#collection" onclick="handleNavItem(this)">COLLECTION</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#Popular" onclick="handleNavItem(this)">POPULAR</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#about" onclick="handleNavItem(this)">ABOUT US</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#reviewrs" onclick="handleNavItem(this)">REVIWERS</a>
+          </li>
+      </div>
+      <a href="shoppingCart.html">
+        <i class="fa-solid fa-cart-plus" style="color: white; font-size: 25px;"></i>
+      </a>
+    </div>
+  </nav>
+  <!--end of nav-->
+  <!--start header-->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Image/h1_hero1.jpg" class="d-block w-100" alt="Image hero">
+            <div class="carousel-caption text-start text-black">
+                <h2>Fashin<span style="color: #e5345b;">Shop</span></h2>
+                <p class="">Welcome to Fashin Shop, where passion meets quality!</p>
+                <div class="mediaBtn ">
+                    <a href="" style="background-color:#4267b2;" class="link">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="" style="background-color:#1da1f2;" class="link">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="" style="background-color:rgb(170, 97, 140);" class="link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="" style="background-color:rgb(71, 60, 60);" class="link">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Image/hero-1.jpg" class="d-block w-100" alt="Image hero">
+            <div class="carousel-caption text-start text-black">
+                <h2>Fashin<span style="color: #e5345b;">Shop</span></h2>
+                <p class="">Welcome to Fashin Shop, where passion meets quality!</p>
+                <div class="mediaBtn ">
+                    <a href="" style="background-color:#4267b2;" class="link">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="" style="background-color:#1da1f2;" class="link">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="" style="background-color:rgb(170, 97, 140);" class="link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="" style="background-color:rgb(71, 60, 60);" class="link">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Image/hero-2.jpg" class="d-block w-100" alt="Image hero">
+            <div class="carousel-caption text-start text-black">
+                <h2>Fashin<span style="color: #e5345b;">Shop</span></h2>
+                <p class="">Welcome to Fashin Shop, where passion meets quality!</p>
+                <div class="mediaBtn ">
+                    <a href="" style="background-color:#4267b2;" class="link">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="" style="background-color:#1da1f2;" class="link">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="" style="background-color:rgb(170, 97, 140);" class="link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="" style="background-color:rgb(71, 60, 60);" class="link">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end of header-->
+ <!-- start collection -->
+ <section id = "collection" class = "py-5">
+  <div class = "container">
+      <div class = "title text-center">
+          <h2 class = "position-relative d-inline-block">New Collection</h2>
+      </div>
+
+ <div class = "row g-0">
+  <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+    <button type="button" class="btn2 m-2 text-dark active-filter-btn" onclick="filterButtonClick(this,'all')">All</button>
+    <button type="button" class="btn2 m-2 text-dark" onclick="filterButtonClick(this,'women\'s clothing')">Women's Clothing</button>
+    <button type="button" class="btn2 m-2 text-dark" onclick="filterButtonClick(this,'men\'s clothing')">Men's Clothing</button>
+    <button type="button" class="btn2 m-2 text-dark" onclick="filterButtonClick(this,'jewelery')">Jewelery</button>
+    <button type="button" class="btn2 m-2 text-dark" onclick="filterButtonClick(this,'electronics')">Electronics</button>
+</div>
+
+  <div class = "collection-list mt-4 row gx-0 gy-3" id="product-list">
+          <!-- Product cards will be added here -->
+        </div>
+      </div>
+      </div>
+      </section>
+       <!-- end of collection -->
+        <!--start Popular products-->
+ <section id = "Popular" class = "py-5">
+  <div class = "container">
+      <div class = "title text-center py-5">
+          <h2 class = "position-relative d-inline-block">Popular Products</h2>
+      </div>
+
+      <div class = "special-list row g-0">
+          <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+              <div class = "special-img position-relative overflow-hidden">
+                  <img src = "Image/special_product_1.jpg" class = "w-100">
+                  <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                      <i class = "fas fa-heart" style="color: #e5345b;"></i>
+                  </span>
+              </div>
+              <div class = "text-center">
+                  <p class = "text-capitalize mt-3 mb-1">gray shirt</p>
+                  <span class = "fw-bold d-block">$ 45.50</span>
+                  <a href = "#" class = "btn btn-primary mt-3 addToCartButton">Add to Cart</a>
+              </div>
+          </div>
+
+          <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+              <div class = "special-img position-relative overflow-hidden">
+                  <img src = "Image/special_product_2.jpg" class = "w-100">
+                  <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                      <i class = "fas fa-heart"style="color: #e5345b;"></i>
+                  </span>
+              </div>
+              <div class = "text-center">
+                  <p class = "text-capitalize mt-3 mb-1">gray shirt</p>
+                  <span class = "fw-bold d-block">$ 45.50</span>
+                  <a href = "#" class = "btn btn-primary mt-3 addToCartButton">Add to Cart</a>
+              </div>
+          </div>
+
+          <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+              <div class = "special-img position-relative overflow-hidden">
+                  <img src = "Image/special_product_3.jpg" class = "w-100">
+                  <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                      <i class = "fas fa-heart"style="color: #e5345b;"></i>
+                  </span>
+              </div>
+              <div class = "text-center">
+                  <p class = "text-capitalize mt-3 mb-1">gray shirt</p>
+                  <span class = "fw-bold d-block">$ 45.50</span>
+                  <a href = "#" class = "btn btn-primary mt-3 addToCartButton">Add to Cart</a>
+              </div>
+          </div>
+
+          <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
+              <div class = "special-img position-relative overflow-hidden">
+                  <img src = "Image/special_product_4.jpg" class = "w-100">
+                  <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
+                      <i class = "fas fa-heart"style="color: #e5345b;"></i>
+                  </span>
+              </div>
+              <div class = "text-center">
+                  <p class = "text-capitalize mt-3 mb-1">gray shirt</p>
+                  <span class = "fw-bold d-block">$ 45.50</span>
+                  <a href = "#" class = "btn btn-primary mt-3 addToCartButton">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+        <!-- end of Popular products-->
+    <!--start offers -->
+    <section id = "offers" class = "py-5">
+      <div class = "container">
+          <div class = "row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+              <div class = "offers-content">
+                  <span class = "text-white">Discount Up To 40%</span>
+                  <h2 class = "mt-2 mb-4 text-white">Grand Sale Offer!</h2>
+                  <a href = "#" class = "btn2">Buy Now</a>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- end of offers -->
+ <!-- about us -->
+ <section id = "about" class = "py-5">
+  <div class = "container">
+      <div class = "row gy-lg-5 align-items-center">
+          <div class = "col-lg-6 order-lg-1 text-center text-lg-start">
+              <div class = "title pt-3 pb-5">
+                  <h2 class = "position-relative d-inline-block ms-4">About Us</h2>
+              </div>
+              <p class = "lead text-muted">Welcome to Fashin Shop, where passion meets quality!</p>
+              <p>At Fashin Shop, our mission is to curate a diverse collection of high-quality products that cater to your every need. Whether you're looking for the latest fashion trends, cutting-edge electronics, or unique accessories, we've got you covered. Our team is dedicated to providing not only top-notch products but also exceptional customer service. With a commitment to innovation and customer satisfaction, we strive to be your go-to destination for all your shopping desires.</p>
+          </div>
+          <div class = "col-lg-6 order-lg-0">
+              <img src = "Image/about_us.jpg" alt = "" class = "img-fluid">
+          </div>
+      </div>
+  </div>
+</section>
+<!-- end of about us -->
+<!--reviewrs-->
+<section id="reviewrs" class="text-center my-4">
+  <div class="container">
+      <div class="row">
+          <div class="col-12 section-intro text-center">
+            <div class = "title text-center py-3">
+              <h2 class = "position-relative d-inline-block">Reviewrs</h2>
+          </div>
+              <div class="divider mb-3"></div>
+              <p>Having a list of everything you need in one place.
+              </p>
+          </div>
+      </div>
+      <div class="row g-4 text-start">
+          <div class="col-md-4" data-aos="fade-up">
+              <div class="review p-4">
+                  <div class="person">
+                      <img src="Image/avatar_2.jpg" alt="John">
+                      <div class="text ms-3">
+                          <h6 class="mb-0">John Walker</h6>
+                          <small>Google</small>
+                      </div>
+                  </div>
+                  <p class="pt-4">We have everything we need in one place, making it easy for us to shop.</p>
+                  <div class="stars">
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up">
+              <div class="review p-4">
+                  <div class="person">
+                      <img src="Image/avatar_1.jpg" alt="John">
+                      <div class="text ms-3">
+                          <h6 class="mb-0">John Walker</h6>
+                          <small>Google</small>
+                      </div>
+                  </div>
+                  <p class="pt-4">We have everything we need in one place, making it easy for us to shop.</p>
+                  <div class="stars">
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up">
+              <div class="review p-4">
+                  <div class="person">
+                      <img src="Image/avatar_3.jpg" alt="John">
+                      <div class="text ms-3">
+                          <h6 class="mb-0">John Walker</h6>
+                          <small>Google</small>
+                      </div>
+                  </div>
+                  <p class="pt-4">We have everything we need in one place, making it easy for us to shop.t</p>
+                  <div class="stars">
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up">
+              <div class="review p-4">
+                  <div class="person">
+                      <img src="Image/avatar_1.jpg" alt="John">
+                      <div class="text ms-3">
+                          <h6 class="mb-0">John Walker</h6>
+                          <small>Google</small>
+                      </div>
+                  </div>
+                  <p class="pt-4">We have everything we need in one place, making it easy for us to shop.</p>
+                  <div class="stars">
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up">
+              <div class="review p-4">
+                  <div class="person">
+                      <img src="Image/avatar_2.jpg" alt="John">
+                      <div class="text ms-3">
+                          <h6 class="mb-0">John Walker</h6>
+                          <small>Google</small>
+                      </div>
+                  </div>
+                  <p class="pt-4">We have everything we need in one place, making it easy for us to shop.</p>
+                  <div class="stars">
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up">
+              <div class="review p-4">
+                  <div class="person">
+                      <img src="Image/avatar_3.jpg" alt="John">
+                      <div class="text ms-3">
+                          <h6 class="mb-0">John Walker</h6>
+                          <small>Google</small>
+                      </div>
+                  </div>
+                  <p class="pt-4">We have everything we need in one place, making it easy for us to shop.</p>
+                  <div class="stars">
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                    <i class="bx fa-solid fa-star"></i>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--end of reviews-->
+          <!-- Comments -->
+          <section id = "comment" class = "py-5">
+            <div class = "container">
+                <div class = "d-flex flex-column align-items-center justify-content-center">
+                    <div class = "title text-center pt-3 pb-5">
+                        <h2 class = "position-relative d-inline-block ms-4">Comments</h2>
+                    </div>
+      
+                    <p class = "text-center text-muted">If you have any comment, write it here</p>
+                    <div class = "input-group mb-3 mt-3">
+                        <input type = "text" class = "form-control" placeholder="Enter Your comment ...">
+                        <button class = "btn btn-primary" type = "submit">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of Comments -->
+<!--start footer-->
+      <footer class="bg-dark text-light p-3 mt-3">
+        <div class="container py-3">
+          <div class="row mb-2" style="border-bottom: 1px solid white;">
+            <div class="col-md-6 text-center">
+              <h3>Contact Us:</h3>
+              <p>Email: example@email.com</p>
+              <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="col-md-6 text-center">
+              <h3>Follow Us:</h3>
+              <div class="mediaBtn "style="justify-content: center;">
+                <a href="" style="background-color:#4267b2;" class="link">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="" style="background-color:#1da1f2;" class="link">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="" style="background-color:rgb(170, 97, 140);" class="link">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="" style="background-color:rgb(71, 60, 60);" class="link">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            </div>
+          </div>
+          <div class="row">
+    
+            <div class="col-md-4 col-12"> <h2 class="text-center">Fashin<span style="color: #e5345b;">Shop</span></h2></div>
+            <div class="col-md-2 col-6 text-center text-white">
+                <h4>Shop Men</h4>
+                <p>Formal</p>
+                <p>Casual</p>
+                <p>Summer</p>
+                <p>Sport</p>
+            </div>
+            <div class="col-md-2 col-6 text-center text-white">
+                <h4>Shop Women</h4>
+                <p>Formal</p>
+                <p>Casual</p>
+                <p>Summer</p>
+                <p>Sport</p>
+            </div>
+            <div class="col-md-2 col-6 text-center text-white">
+                <h4>Jewelery</h4>
+                <p>Formal</p>
+                <p>Casual</p>
+                <p>Summer</p>
+                <p>Sport</p>
+            </div>
+            <div class="col-md-2 col-6 text-center text-white">
+                <h4>Electronics</h4>
+                <p>Formal</p>
+                <p>Casual</p>
+                <p>Summer</p>
+                <p>Sport</p>
+            </div>
+          </div>
+         
+        </div>
+      </footer>
+     <!--end of footer--> 
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  
+      <script src="js/cdnjs.cloudflare.com_ajax_libs_limonte-sweetalert2_11.7.32_sweetalert2.min.js"></script>
+      <script src="js/script.js"></script>
+</body>
+</html>

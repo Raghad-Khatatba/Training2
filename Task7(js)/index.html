@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        @media (max-width: 700px) {
+    .container{
+        width: 100% !important;
+        margin: 0;
+        box-shadow: none;
+    }
+}
+    </style>
+</head>
+<body style="background-color: #f4f4f4;">
+
+    <div class="container shadow w-50 bg-white min-vh-100">
+    <h2 class="text-center py-4">Registration</h2>
+    <form id="form1">
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="fname"class="font-weight-bold">First Name:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="text" class="form-control" id="fname" placeholder="Enter your first name">
+                <div class="error text-danger" id="fNameError"></div>
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="lname"class="font-weight-bold">Last Name:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="text" class="form-control" id="lName" placeholder="Enter your last name">
+                <div class="error text-danger" id="lNameError"></div>
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="email"class="font-weight-bold">Email:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <div class="error text-danger" id="emailError"></div>
+            </div>
+           
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="phone"class="font-weight-bold">Mobile:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="text" class="form-control" id="phone" placeholder="Enter your mobile phone">
+                <div class="error text-danger" id="phoneError"></div>
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="gender" class="font-weight-bold">Gender:</label>
+            </div>
+            <div class="col-3 col-md-2 col-lg-2">
+                <input class="form-radio-input" type="radio" value="male" id="male">
+                <label class="form-radio-label" for="male">
+                    Male
+                </label>
+            </div>
+            <div class="col-3 col-md-2 col-lg-2">
+                <input class="form-radio-input " type="radio" value="female" id="female" checked>
+                <label class="form-radio-label" for="female">
+                    Female
+                </label>
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="birthdate" class="font-weight-bold">Date of Birth :</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="date" id="birthdate" name="birthdate" class="form-control" />
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+            <label for="adress" class="form-label font-weight-bold">Adress :</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+            <textarea class="form-control " id="adress" rows="4" placeholder="Enter your adress"></textarea>
+            </div>
+          </div>
+          <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="city"class="font-weight-bold">City:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="text" class="form-control" id="city">
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="area"class="font-weight-bold">Area:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="text" class="form-control" id="area">
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="pin"class="font-weight-bold">Area PIN:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="text" class="form-control" id="pin">
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="state"class="font-weight-bold">State:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+                <input type="text" class="form-control" id="state">
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+                <label for="qualification"class="font-weight-bold">Qualification:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+        <select class="form-select w-50 mx-2" id="qualification" aria-label="Select Qualification">
+            <option selected>Select Qualification</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          </div>
+          </div>
+          <div class="group d-flex">
+            <label for="checkbox" class="w-auto mx-3 mx-lg-2 mx-md-2 font-weight-bold">Specialization:</label>
+            <div class="checkbox w-75">
+              <div class="group">
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  name="option"
+                  value="Computer Science"
+                />
+                <label for="checkbox">Computer Science</label>
+              </div>
+              <div class="group">
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  name="option"
+                  value="Information Technology"
+                />
+                <label for="checkbox"
+                  >Information Technology</label
+                >
+              </div>
+              <div class="group">
+                <input
+                  type="checkbox"
+                  id="checkbox"
+                  name="option"
+                  value="Computer Architecture"
+                />
+                <label for="checkbox"
+                  >Computer Architecture</label
+                >
+              </div>
+            </div>
+          </div>
+            <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+            <label for="password" class="font-weight-bold">Password:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            <div class="error text-danger" id="passwordError"></div>
+            </div>
+        </div>
+        <div class="form-row align-items-center p-2">
+            <div class="col-3 col-md-2 col-lg-2">
+            <label for="password" class="font-weight-bold">Confirm Password:</label>
+            </div>
+            <div class="col-9 col-md-10 col-lg-10">
+            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+            <div class="error text-danger" id="confirmPasswordError"></div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success my-4">Submit</button>
+    </form>
+</div>
+
+<script src="js.js"></script>
+
+</body>
+</html>
