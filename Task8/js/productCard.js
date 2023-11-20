@@ -60,7 +60,6 @@ function loadSimilarProducts(categoryId) {
         });
 }
 
-// Event delegation for Add to Cart button
 document.getElementById('similar-products').addEventListener('click', function (event) {
     if (event.target.classList.contains('addToCartButton')) {
         const productTitle = event.target.closest('.card').querySelector('.text-capitalize').textContent;

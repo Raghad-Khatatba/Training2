@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
               productList.appendChild(card);
           });
 
-          // Add a single click event listener for the entire product-list container
           productList.addEventListener('click', function (event) {
               const button = event.target.closest('.addToCartButton');
               if (button) {
@@ -102,10 +101,8 @@ function filterButtonClick(button,category) {
 
 }
 function handleNavItem(clickedItem) {
-  // Remove active1 class from all nav items
   $('.nav-item a').removeClass('active1');
 
-  // Add active1 class to the clicked nav item
   $(clickedItem).addClass('active1');
 }
 
@@ -114,7 +111,6 @@ function addToCart(product) {
   const existingProductIndex = cartItems.findIndex(item => item.title === product.title);
 
   if (existingProductIndex !== -1) {
-      // Check if quantity is defined and increment, otherwise set it to 1
       cartItems[existingProductIndex].quantity = (Number(cartItems[existingProductIndex].quantity) || 0) + 1;
   } else {
       product.quantity = 1;
