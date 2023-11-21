@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
       interval: carouselInterval
   });
 
-
   fetch('https://fakestoreapi.com/products')
       .then((response) => response.json())
       .then((products) => {
@@ -19,11 +18,11 @@ document.addEventListener("DOMContentLoaded", function () {
               card.innerHTML = `
               <div class="card p-4">
               <div class="collection-img position-relative" >
-                  <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                  <img src="${product.image}" class="card-img-top cartImg" alt="${product.title}">
               </div>
               <div class="text-center">
-                  <h5 class="text-capitalize my-1">${product.title}</h5>
-                  <span class="fw-bold" style="display: block;">$${product.price.toFixed(2)}</span>
+                  <h5 class="text-capitalize my-1 cartTitle">${product.title}</h5>
+                  <span class="fw-bold cartPrice" style="display: block;">$${product.price.toFixed(2)}</span>
                   <button class="btn btn-primary addToCartButton">Add to Cart</button>
               </div>
               </div>
@@ -40,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
           productList.addEventListener('click', function (event) {
               const button = event.target.closest('.addToCartButton');
               if (button) {
-                  const productTitle = button.closest('.col-md-6').querySelector('.text-center').querySelector('.text-capitalize').textContent;
-                  const productPrice = button.closest('.col-md-6').querySelector('.text-center').querySelector('.fw-bold').textContent.replace('$', '');
-                  const productImage = button.closest('.col-md-6').querySelector('.collection-img').querySelector('.card-img-top').src;
+                  const productTitle = button.closest('.col-md-6').querySelector('.text-center').querySelector('.cartTitle').textContent;
+                  const productPrice = button.closest('.col-md-6').querySelector('.text-center').querySelector('.cartPrice').textContent.replace('$', '');
+                  const productImage = button.closest('.col-md-6').querySelector('.collection-img').querySelector('.cartImg').src;
                   const product = {
                       title: productTitle,
                       price: parseFloat(productPrice),
@@ -55,14 +54,15 @@ document.addEventListener("DOMContentLoaded", function () {
           });
       });
 });
-function filterButtonClick(button,category) {
+
+function filterButtonClick(button, category) {
   const buttons = document.querySelectorAll('.filter-button-group button');
   buttons.forEach(btn => btn.classList.remove('active-filter-btn'));
 
   button.classList.add('active-filter-btn');
   const filterValue = button.getAttribute('data-filter');
   const productList = document.getElementById('product-list');
-  productList.innerHTML = ''; 
+  productList.innerHTML = '';
   let apiUrl = 'https://fakestoreapi.com/products';
 
   if (category !== 'all') {
@@ -80,11 +80,11 @@ function filterButtonClick(button,category) {
           card.innerHTML = `
               <div class="card p-4">
                   <div class="collection-img position-relative" >
-                      <img src="${product.image}" class="card-img-top" alt="${product.title}">
+                      <img src="${product.image}" class="card-img-top cartImg" alt="${product.title}">
                   </div>
                   <div class="text-center">
-                      <h5 class="text-capitalize my-1">${product.title}</h5>
-                      <span class="fw-bold" style="display: block;">$${product.price.toFixed(2)}</span>
+                      <h5 class="text-capitalize my-1 cartTitle">${product.title}</h5>
+                      <span class="fw-bold cartPrice" style="display: block;">$${product.price.toFixed(2)}</span>
                       <button class="btn btn-primary addToCartButton">Add to Cart</button>
                   </div>
               </div>
@@ -98,8 +98,8 @@ function filterButtonClick(button,category) {
           productList.appendChild(card);
       });
   });
-
 }
+
 function handleNavItem(clickedItem) {
   $('.nav-item a').removeClass('active1');
 
@@ -123,6 +123,91 @@ function addToCart(product) {
       title: "Product added to cart!",
       text: "You can see it in the shopping cart",
       icon: "success"
+  });
+}
+$(document).ready(function () {
+  clearErrors(); 
+$('#openLoginModal').click(function() {
+  $('#loginModal').modal('show');
+});
+$('#logInCloseButton').click(function () {
+  $('#loginModal').modal('hide');
+});
+$('#signUpCloseButton').click(function () {
+  $('#signUpModal').modal('hide');
+});
+$('#openSignUpModal').click(function() {
+  $('#signUpModal').modal('show');
+});
+  });
+function signUp() {
+  const name = document.getElementById('signupName').value;
+  const email = document.getElementById('signupEmail').value;
+  const password = document.getElementById('signupPassword').value;
+  const confirmPassword = document.getElementById('signupConfirmPassword').value;
+
+  if (password !== confirmPassword) {
+    var errorElement = document.getElementById("passErr");
+    errorElement.textContent = "Password and Confirm Password do not match";
+      return;
+  }
+  const user = {
+      name: name,
+      email: email,
+      password: password
+  };
+
+  localStorage.setItem('user', JSON.stringify(user));
+
+  Swal.fire({
+    title: "Sign Up",
+    text: "Sign Up successful!",
+    icon: "success"
+}).then(() => {
+    $('#signUpModal').modal('hide');
+});
+}
+
+function login() {
+  const email = document.getElementById('loginEmail').value;
+  const password = document.getElementById('loginPassword').value;
+
+  const storedUser = JSON.parse(localStorage.getItem('user'));
+
+  if (!storedUser || storedUser.email !== email || storedUser.password !== password) {
+    var errorElement = document.getElementById("Err");
+    errorElement.textContent = "Invalid email or password";
+      return;
+  }
+
+  document.getElementById('loginNavItem').classList.add('d-none');
+  document.getElementById('SignUpNavItem').classList.add('d-none');
+  document.getElementById('userName').textContent = storedUser.name;
+  document.getElementById('userNameNavItem').classList.remove('d-none');
+  document.getElementById('logoutNavItem').classList.remove('d-none');
+
+  Swal.fire({
+    title: "Login",
+    text: "Login successful!",
+    icon: "success"
+}).then(() => {
+  $('#loginModal').modal('hide');
+});
+}
+function logout() {
+  localStorage.removeItem('user');
+
+  document.getElementById('userNameNavItem').classList.add('d-none');
+  document.getElementById('logoutNavItem').classList.add('d-none');
+  document.getElementById('loginNavItem').classList.remove('d-none');
+  document.getElementById('SignUpNavItem').classList.remove('d-none');
+
+  alert('Logout successful!');
+}
+function clearErrors() {
+  var errorElements = document.querySelectorAll(".error");
+  errorElements.forEach(function (element) {
+      element.textContent = "";
   });
 }
 /*function addToCart(product) {

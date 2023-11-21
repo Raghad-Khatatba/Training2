@@ -50,6 +50,7 @@
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
 }
+
 @keyframes slideIn {
     from {
         transform: translateY(-100%);
@@ -263,5 +264,8 @@ font-weight: 700;
     }
     .title h2{
         font-size: 30px;
+    }
+    .item2{
+        margin-left: 0 !important;
     }
 }

@@ -5,59 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateTotal(cartItems);
 });
-document.getElementById("checkoutForm").onsubmit=function() {
-var email=document.getElementById("email").value;
-var shippingAddress=document.getElementById("shippingAddress").value;
-var creditCard=document.getElementById("creditCard").value;
-event.preventDefault();
 
-clearErrors();
-var isValid = true;
-var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-var AddressPattern = /^[a-zA-Z]{1,9}$/;
-const creditCardpattern = /^\d{16}$/;
-if (!emailPattern.test(email)) {
-    displayError("emailErr", "Invalid email address.");
-    isValid = false;
-}
-if (!AddressPattern.test(shippingAddress)) {
-    displayError("AddressErr", "shipping Address is required , and be between 2 to 10 characters. ");
-    isValid = false;
-}
-if (!creditCardpattern.test(creditCard)) {
-    displayError("creditCardErr", "Credit Card is required , and must be 16 numbers");
-    isValid = false;
-}
-if (isValid) {
-          Swal.fire({
-            title: "Payment Successful!",
-            text: "Your payment information has been submitted successfully.",
-            icon: "success"
-        }).then(() => {
-            $('#paymentModal').modal('hide');
-        });
-}
-else{
-    return isValid;
-}
-}
-
-function clearErrors() {
-    var errorElements = document.querySelectorAll(".error");
-    errorElements.forEach(function (element) {
-        element.textContent = "";
-    });
-}
-
-function displayError(elementId, errorMessage) {
-    var errorElement = document.getElementById(elementId);
-    errorElement.textContent = errorMessage;
-}
-
-function submitPayment() {
-    $('#paymentModal').modal('hide');
-    alert('Payment submitted successfully!');
-}
 function displayCartItems(cartItems) {
     const cartContainer = document.getElementById('cart-items');
 
@@ -170,4 +118,57 @@ $(document).ready(function () {
     });
 
     });
+    document.getElementById("checkoutForm").onsubmit=function() {
+        var email=document.getElementById("email").value;
+        var shippingAddress=document.getElementById("shippingAddress").value;
+        var creditCard=document.getElementById("creditCard").value;
+        event.preventDefault();
+        
+        clearErrors();
+        var isValid = true;
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        var AddressPattern = /^[a-zA-Z]{1,9}$/;
+        const creditCardpattern = /^\d{16}$/;
+        if (!emailPattern.test(email)) {
+            displayError("emailErr", "Invalid email address.");
+            isValid = false;
+        }
+        if (!AddressPattern.test(shippingAddress)) {
+            displayError("AddressErr", "shipping Address is required , and be between 2 to 10 characters. ");
+            isValid = false;
+        }
+        if (!creditCardpattern.test(creditCard)) {
+            displayError("creditCardErr", "Credit Card is required , and must be 16 numbers");
+            isValid = false;
+        }
+        if (isValid) {
+                  Swal.fire({
+                    title: "Payment Successful!",
+                    text: "Your payment information has been submitted successfully.",
+                    icon: "success"
+                }).then(() => {
+                    $('#paymentModal').modal('hide');
+                });
+        }
+        else{
+            return isValid;
+        }
+        }
+        
+        function clearErrors() {
+            var errorElements = document.querySelectorAll(".error");
+            errorElements.forEach(function (element) {
+                element.textContent = "";
+            });
+        }
+        
+        function displayError(elementId, errorMessage) {
+            var errorElement = document.getElementById(elementId);
+            errorElement.textContent = errorMessage;
+        }
+        
+        function submitPayment() {
+            $('#paymentModal').modal('hide');
+            alert('Payment submitted successfully!');
+        }
 
