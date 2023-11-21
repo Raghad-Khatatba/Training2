@@ -1,3 +1,4 @@
+https://655c6b10ebc67a50a3be8086--magical-pothos-d12a50.netlify.app/
 <h1>Fashin Shop</h1>
 <p>A e-commerce website using bootstrap ,html, css, js ,jqery.</p>
 <p>At Fashin Shop, our mission is to curate a diverse collection of high-quality products that cater to your every need. Whether you're looking for the latest fashion trends, cutting-edge electronics, or unique accessories, we've got you covered. Our team is dedicated to providing not only top-notch products but also exceptional customer service. With a commitment to innovation and customer satisfaction, we strive to be your go-to destination for all your shopping desires.</p>
