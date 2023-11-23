@@ -9,6 +9,7 @@ https://655d1e8972f73412f5d2f381--jocular-parfait-b03e96.netlify.app/
 <hr>
 <h1>Features</h1>
 <ul>
+  <li>Authentication :user can signup,login and logout.</li>
   <li>Product Listing : Browse available products from api fake store.</li>
   <li>Category : user can filter Product List </li>
   <li>Product Details: allows users to click on a product to view its details, including a description, reviews, and related products.</li>
