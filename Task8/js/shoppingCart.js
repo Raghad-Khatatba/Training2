@@ -147,6 +147,7 @@ $(document).ready(function () {
                     text: "Your payment information has been submitted successfully.",
                     icon: "success"
                 }).then(() => {
+                    localStorage.removeItem('user');
                     $('#paymentModal').modal('hide');
                 });
         }
