@@ -1,0 +1,54 @@
+.header {
+  background-image: url(../../Img/banner-img2.jpg);
+  background-color: rgba(0, 0, 0, 0.18);
+  height: 65vh;
+  color: white;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 65vh;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 100%;
+}
+.header-content h1 {
+  font-weight: bold;
+  color: white;
+}
+.header-content p {
+  width: 45%;
+  line-height: 1.7rem;
+  font-weight: 600;
+}
+.btn1 {
+  background-color: #8e7754;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border: 1px solid rgb(80, 68, 68);
+  transition: 0.2s;
+  box-shadow: 1px 1px 20px rgb(134, 125, 125);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn1:hover {
+  background-color: #a78865;
+  box-shadow: 1px 1px 40px rgb(61, 58, 58);
+  color: #ecd7b6;
+}
+
+@media (max-width: 600px) {
+  .header-content p {
+    width: 80%;
+  }
+}

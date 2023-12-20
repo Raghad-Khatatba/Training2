@@ -1,0 +1,9 @@
+.Favorites {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 16px;
+  row-gap: 2rem;
+  margin: 20px;
+}

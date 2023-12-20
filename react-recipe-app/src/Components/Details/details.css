@@ -1,0 +1,23 @@
+img {
+  width: 80%;
+}
+.details {
+  height: 70vh;
+}
+.faArrow:hover {
+  color: rgb(245, 117, 43);
+}
+.similer-cards {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 16px;
+  row-gap: 2rem;
+  margin: 20px;
+}
+@media (max-width: 600PX){
+  .details {
+    height: auto;
+  }
+  }

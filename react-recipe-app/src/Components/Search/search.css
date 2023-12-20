@@ -1,0 +1,70 @@
+.header {
+  background-image: url(../../Img/banner-img.jpg);
+  background-color: rgba(0, 0, 0, 0.18);
+  height: 50vh;
+  color: white;
+  background-size: cover;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 50vh;
+}
+.header-title {
+  font-size: 3.2rem;
+}
+.header-text {
+  margin-top: -1.8rem;
+  margin-bottom: 2.8rem;
+  opacity: 0.8;
+  max-width: 770px;
+}
+.search-form {
+  width: 100%;
+  max-width: 680px;
+}
+.search-form-elem {
+  padding: 0.5rem 1.6rem;
+  border-radius: 3.8rem;
+  display: flex;
+}
+.search-form-elem .form-control {
+  font-size: 2rem;
+  padding: 0.6rem;
+}
+.search-form-elem .form-control::placeholder {
+  opacity: 0.9;
+}
+input {
+  border: none !important;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  color: rgb(68, 64, 64);
+}
+@media screen and (max-width: 800px) {
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-text {
+    margin-top: -1.8rem;
+    margin-bottom: 2.8rem;
+    opacity: 0.8;
+    max-width: 500px;
+  }
+  .faS {
+    size: 26 !important;
+  }
+  .search-form-elem .form-control {
+    font-size: 1rem;
+    padding: 0.4rem;
+  }
+  .search-form-elem .form-control::placeholder {
+    opacity: 0.6;
+  }
+}
